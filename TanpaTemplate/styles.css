@@ -1,0 +1,217 @@
+		* {
+	        box-sizing: border-box;
+		}
+
+		body {
+	        margin: 0;
+	        font-family: Arial, Helvetica, sans-serif;
+		}
+
+	      /* Style the side navigation */
+		.sidenav {
+	        height: 100%;
+	        width: 200px;
+	        position: fixed;
+	        z-index: 1;
+	        top: 0;
+	        left: 0;
+	        background-color: #111;
+	        overflow-x: hidden;
+		}
+
+		.nama {
+		      	font-family: Palatino;
+		      	color: white;
+				text-shadow:
+				    0 0 5px black,
+				    0 0 10px #fff
+		}
+
+		.ig:hover {
+		    color: #255784;
+		    background: #2196f3;
+		    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+		    border-radius: 10px;
+		    cursor: pointer;
+		}
+
+		.github:hover {
+		    color: #255784;
+		    background: #2196f3;
+		    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+		    border-radius: 30px;
+		    cursor: pointer;
+		}
+
+		.youtube:hover {
+		    color: #255784;
+		    background: #2196f3;
+		    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+		    border-radius: 30px;
+		    cursor: pointer;
+		}
+
+		.mail:hover {
+		    color: #255784;
+		    background: #2196f3;
+		    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+		    border-radius: 10px;
+		    cursor: pointer;
+		}
+
+		.wa:hover {
+		    color: #255784;
+		    background: #2196f3;
+		    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+		    border-radius: 30px;
+		    cursor: pointer;
+		}
+
+
+	      /* Side navigation links */
+		.sidenav a {
+	        color: white;
+	        padding: 16px;
+	        text-decoration: none;
+	        display: block;
+		}
+
+	      /* Change color on hover */
+		.sidenav a:hover {
+	        background-color: #ddd;
+	        color: black;
+		}
+
+		.active {
+	        background-color: grey;
+	        color : black;
+		}
+
+	      /* Style the content */
+		.content {
+			margin-left: 180px;
+	        padding-left: 20px;
+	        background-image: url('img/isi.jpg');
+		}
+
+		@keyframes color-change {
+		  0% { color: #a3a3a3; }
+		  20% { color: #d1d1d1; }
+		  40% { color: #fcfbfb; }
+		  60% { color: #fcfbfb; }
+		  80% { color: #d1d1d1; }
+		  100% { color: #a3a3a3; }
+		}
+
+		.judul {
+			text-align: center;
+		    font-family: Palatino;
+			text-shadow:
+			    0 0 5px #fff,
+			    0 0 10px #fff,
+			    0 0 20px #fff,
+			    0 0 40px #0ff,
+			    0 0 80px #0ff,
+			    0 0 90px #0ff,
+			    0 0 100px #0ff,
+				0 0 150px #0ff;
+			animation: color-change 1s infinite;
+		}
+
+		.jumbotron {
+		    animation: blink 1s;
+		    animation-iteration-count: infinite;
+		}
+
+
+		@keyframes blink { 
+			0% { border-color:#6bc9cf ; }  
+			20% { border-color:#6bcf70 ; }  
+			40% { border-color:#dfea35 ; }  
+			60% { border-color:#dfea35; }  
+			80% { border-color:#6bcf70 ; }
+			100% { border-color:#6bc9cf ; } 
+		}
+
+		/* CSS Gallery */
+		@import url('https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro:200,300,400,600');
+
+		h1 {
+		  font-family: 'Source Sans Pro', sans-serif;
+		  font-size: 22px;
+		  color: #151E3F;
+		  font-weight: 300;
+		  letter-spacing: 2px;
+		}
+
+		.wrapper {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  > * {
+		    margin: 5px;
+		  }
+		}
+
+		.media {
+		  width: 300px;
+		  height: 200px;
+		  overflow: hidden;
+		  position: relative;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  img {
+		      max-width: 100%;
+		      height: auto;
+		    }
+		}
+
+		.layer {
+		  opacity: 0;
+		  position: absolute;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  width: 10px;
+		  height: 90%;
+		  background: #FFF;
+		  color: #151E3F;
+		  transition: all 0.9s ease;
+		  p {
+		    transition: all 0.9s ease;
+		    transform: scale(0.1)
+		  }
+		}
+
+		p {
+		  font-family: 'Inconsolata', monospace;
+		  text-align: center;
+		  font-size: 15px;
+		  letter-spacing:1px;
+		}
+
+		.media:hover .layer {
+		  opacity: 0.8;
+		  width: 90%;
+		  transition: all 0.5s ease;
+		  p {
+		    transform: scale(1);
+		    transition: all 0.9s ease;
+		  }
+		}
+
+		@media (max-width: 800px){
+		  body {
+		    transform: scale(0.6);
+		  }
+		}
+
+		@media (max-width: 600px) {
+		    .wrapper {
+		    display: block;
+		    > * {
+		      margin: 10px;
+		    }
+		  }
+		}
